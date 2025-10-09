@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-1: #00274c;
+  --color-2: #11296b;
+  --color-3: #ededed;
+  --color-4: #ffdb57;
+  --color-5: #ffcb05;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-coop-1: var(--color-1); 
+  --color-coop-2: var(--color-2);  
+  --color-coop-3: var(--color-3);
+  --color-coop-4: var(--color-4);
+  --color-coop-5: var(--color-5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url("./assets/fonts/SpaceMono-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url("./assets/fonts/SpaceMono-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("./assets/fonts/RedHatDisplay-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("./assets/fonts/RedHatDisplay-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("./assets/fonts/RedHatDisplay-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("./assets/fonts/RedHatDisplay-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("./assets/fonts/RedHatDisplay-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("./assets/fonts/RedHatDisplay-ExtraBold.ttf");
+  font-weight: 800;
+}
