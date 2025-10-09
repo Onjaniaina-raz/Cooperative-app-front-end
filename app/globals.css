@@ -82,3 +82,11 @@ body {
   src: url("./assets/fonts/RedHatDisplay-ExtraBold.ttf");
   font-weight: 800;
 }
+
+._button{
+  @apply px-4 py-2 rounded-lg font-[RedHatDisplay] cursor-pointer font-semibold;
+  @apply border hover:border-coop-2;
+  @apply bg-coop-2 hover:bg-white;
+  @apply text-coop-3 hover:text-coop-2;
+  @apply transition duration-150 ease-out;
+}
