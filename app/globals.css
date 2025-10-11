@@ -90,3 +90,17 @@ body {
   @apply text-coop-3 hover:text-coop-2;
   @apply transition duration-150 ease-out;
 }
+
+._arrowbtn{
+  @apply p-1 rounded-lg cursor-pointer;
+  @apply border border-black;
+  @apply bg-black hover:bg-white;
+  @apply text-white hover:text-black;
+  @apply transition duration-150 ease-out;
+}
+
+._input{
+  @apply py-2 placeholder:font-semibold;
+  @apply placeholder-gray-500 ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2;
+  @apply text-black rounded-2xl border-none;
+}

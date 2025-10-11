@@ -4,7 +4,7 @@ import React from "react"
 
 const layout = ({children} : {children: React.ReactNode}) => {
   return (
-    <div className="min-h-screen flex flex-col bg-coop-3">
+    <div className="min-h-screen flex flex-col bg-coop-3 cursor-default">
       <Header />
       <main className="flex-1 flex">
         {children}

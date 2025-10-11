@@ -20,7 +20,7 @@ const Navlink = ({
     <div className="relative group">
       <Link
         href={href}
-        className={`py-1 md:py-3 text-gray-700 group-hover:text-coop-2 transition-colors block ${
+        className={`py-1 md:py-7 lg:px-2 text-gray-700 group-hover:text-coop-2 transition-colors block ${
           pathname === href ? "text-coop-2" : ""
         } ${className}`}
       >
