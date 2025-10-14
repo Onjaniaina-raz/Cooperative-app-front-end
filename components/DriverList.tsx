@@ -39,7 +39,7 @@ const DriverList = ({
       <section className="flex gap-2 items-center">
         <VenusAndMars className="w-6 h-6 text-coop-2" />
         <span className="font-bold">:</span>
-        <span className="font-semibold">{gender}</span>
+        <span className="font-regular">{gender}</span>
       </section>
 
       <section className="flex gap-2 items-center">
@@ -51,7 +51,7 @@ const DriverList = ({
       <section className="flex gap-2 items-center">
         <MapPinHouse className="w-6 h-6 text-coop-2" />
         <span className="font-bold">:</span>
-        <span className="font-semibold">{address}</span>
+        <span className="font-bold">{address}</span>
       </section>
     </>
   );

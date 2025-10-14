@@ -1,15 +1,14 @@
 "use client";
-import { CalendarCheck, Car, Pencil, Trash } from "lucide-react";
-import TravelerList from "./TravelerList";
-import { travelers } from "@/constants";
-import { ArrowBigLeftIcon, ArrowBigRight, Plus, Search } from "lucide-react";
+import { vehicule } from "@/constants";
+import { ArrowBigLeftIcon, ArrowBigRight, CalendarCheck, Car, Pencil, Plus, Search, Trash } from "lucide-react";
 import { useEffect, useState } from "react";
 import ListSkeleton from "./ListSkeleton";
+import VehiculeList from "./VehiculeList";
 
-const TravelerSection = () => {
+const VehiculeSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
-  const travelersPerPage = 7;
+  const vehiculePerPage = 7;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -19,10 +18,10 @@ const TravelerSection = () => {
     return () => clearTimeout(timer);
   }, [currentPage]);
 
-  const totalPages = Math.ceil(travelers.length / travelersPerPage);
-  const indexOfLastDriver = currentPage * travelersPerPage;
-  const indexOfFirstDriver = indexOfLastDriver - travelersPerPage;
-  const currentTravelers = travelers.slice(indexOfFirstDriver, indexOfLastDriver);
+  const totalPages = Math.ceil(vehicule.length / vehiculePerPage);
+  const indexOfLastDriver = currentPage * vehiculePerPage;
+  const indexOfFirstDriver = indexOfLastDriver - vehiculePerPage;
+  const currentVehiculess = vehicule.slice(indexOfFirstDriver, indexOfLastDriver);
 
   const nextPage = () => {
     if (currentPage < totalPages) {
@@ -39,8 +38,8 @@ const TravelerSection = () => {
   };
 
   return (
-    <>
-      <section className="flex justify-between items-center">
+  <>
+  <section className="flex justify-between items-center">
         <div className="flex gap-8">
           <button className="flex items-center _button gap-2">
             <span>Ajouter </span>
@@ -92,16 +91,16 @@ const TravelerSection = () => {
         <ListSkeleton />
       ) : (
         <div className="flex flex-1 flex-col gap-2">
-          {currentTravelers.map((traveler) => (
+          {currentVehiculess.map((vehicule) => (
             <div
               className="py-6 bg-white rounded-lg flex items-center justify-between px-4 flex-wrap"
-              key={traveler.id}
+              key={vehicule.id}
             >
-              <TravelerList
-                name={traveler.name}
-                phone={traveler.phone}
-                gender={traveler.gender}
-                idCard={traveler.idCard}
+              <VehiculeList
+                plate={vehicule.plate}
+                place={vehicule.place}
+                vehiculeclass={vehicule.vehiculeclass}
+                disponibility={vehicule.disponibility}
               />
 
               <section className="flex gap-4 items-center">
@@ -129,4 +128,4 @@ const TravelerSection = () => {
   );
 };
 
-export default TravelerSection;
+export default VehiculeSection;

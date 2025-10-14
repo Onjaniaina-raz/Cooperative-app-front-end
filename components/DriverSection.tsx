@@ -1,9 +1,18 @@
-"use client"
-import { driver } from '@/constants'
-import { ArrowBigLeftIcon, ArrowBigRight, CalendarCheck, Car, Pencil, Plus, Search, Trash } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import DriverList from './DriverList'
-import ListSkeleton from './ListSkeleton'
+"use client";
+import { driver } from "@/constants";
+import {
+  ArrowBigLeftIcon,
+  ArrowBigRight,
+  CalendarCheck,
+  Car,
+  Pencil,
+  Plus,
+  Search,
+  Trash,
+} from "lucide-react";
+import { useEffect, useState } from "react";
+import DriverList from "./DriverList";
+import ListSkeleton from "./ListSkeleton";
 
 const DriverSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,7 +22,7 @@ const DriverSection = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000); 
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [currentPage]);
@@ -47,19 +56,19 @@ const DriverSection = () => {
           </button>
 
           <div className="flex justify-between items-center gap-4">
-            <button 
+            <button
               className="_arrowbtn"
               onClick={prevPage}
               disabled={currentPage === 1 || isLoading}
             >
               <ArrowBigLeftIcon />
             </button>
-            
+
             <span className="flex items-center justify-center border border-black font-bold h-8 w-8 rounded-full bg-white font-[SpaceMono]">
               {currentPage}
             </span>
 
-            <button 
+            <button
               className="_arrowbtn"
               onClick={nextPage}
               disabled={currentPage === totalPages || isLoading}
@@ -92,7 +101,10 @@ const DriverSection = () => {
       ) : (
         <div className="flex flex-1 flex-col gap-2">
           {currentDrivers.map((driver) => (
-            <div className="py-6 bg-white rounded-lg flex items-center justify-between px-4 flex-wrap" key={driver.id}>
+            <div
+              className="py-6 bg-white rounded-lg flex items-center justify-between px-4 flex-wrap"
+              key={driver.id}
+            >
               <DriverList
                 name={driver.name}
                 phone={driver.phone}
@@ -123,7 +135,7 @@ const DriverSection = () => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default DriverSection
+export default DriverSection;

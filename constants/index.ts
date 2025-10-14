@@ -71,3 +71,11 @@ export const travelers = Array.from({ length: 10 }, (_, i) => ({
     idCard: `${Math.random().toString().slice(2, 14)}`,
     address : 'Lot 03 Soamiampita Itaosy'
   }));
+
+  export const vehicule = Array.from({ length: 10 }, (_, i) => ({
+    id: i + 1,
+    plate: `${Math.random().toString().slice(2, 5)} ${Math.random().toString().slice(2, 4)} TAF`,
+    place: i % 2 === 0 ? "12" : "6",
+    vehiculeclass: i % 2 === 0 ? "VIP" : "Premium",
+    disponibility : i % 2 === 0 ? "Disponible" : "Non disponible"
+  }));
