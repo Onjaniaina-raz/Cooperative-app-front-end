@@ -54,3 +54,20 @@ export const menuItems = [
     icon: History,
   },
 ];
+
+export const travelers = Array.from({ length: 10 }, (_, i) => ({
+    id: i + 1,
+    name: `Traveler ${i + 1}`,
+    phone: `034 ${Math.random().toString().slice(2, 5)} ${Math.random().toString().slice(2, 5)} ${Math.random().toString().slice(2, 4)}`,
+    gender: i % 2 === 0 ? "Homme" : "Femme",
+    idCard: `${Math.random().toString().slice(2, 14)}`
+  }));
+
+  export const driver = Array.from({ length: 10 }, (_, i) => ({
+    id: i + 1,
+    name: `Driver ${i + 1}`,
+    phone: `034 ${Math.random().toString().slice(2, 5)} ${Math.random().toString().slice(2, 5)} ${Math.random().toString().slice(2, 4)}`,
+    gender: i % 2 === 0 ? "Homme" : "Femme",
+    idCard: `${Math.random().toString().slice(2, 14)}`,
+    address : 'Lot 03 Soamiampita Itaosy'
+  }));

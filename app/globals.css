@@ -15,8 +15,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-coop-1: var(--color-1); 
-  --color-coop-2: var(--color-2);  
+  --color-coop-1: var(--color-1);
+  --color-coop-2: var(--color-2);
   --color-coop-3: var(--color-3);
   --color-coop-4: var(--color-4);
   --color-coop-5: var(--color-5);
@@ -36,54 +36,54 @@ body {
 }
 
 @font-face {
-  font-family: 'SpaceMono';
+  font-family: "SpaceMono";
   src: url("./assets/fonts/SpaceMono-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'SpaceMono';
+  font-family: "SpaceMono";
   src: url("./assets/fonts/SpaceMono-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'RedHatDisplay';
+  font-family: "RedHatDisplay";
   src: url("./assets/fonts/RedHatDisplay-Light.ttf");
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'RedHatDisplay';
+  font-family: "RedHatDisplay";
   src: url("./assets/fonts/RedHatDisplay-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'RedHatDisplay';
+  font-family: "RedHatDisplay";
   src: url("./assets/fonts/RedHatDisplay-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'RedHatDisplay';
+  font-family: "RedHatDisplay";
   src: url("./assets/fonts/RedHatDisplay-SemiBold.ttf");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'RedHatDisplay';
+  font-family: "RedHatDisplay";
   src: url("./assets/fonts/RedHatDisplay-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'RedHatDisplay';
+  font-family: "RedHatDisplay";
   src: url("./assets/fonts/RedHatDisplay-ExtraBold.ttf");
   font-weight: 800;
 }
 
-._button{
+._button {
   @apply px-4 py-2 rounded-lg font-[RedHatDisplay] cursor-pointer font-semibold;
   @apply border hover:border-coop-2;
   @apply bg-coop-2 hover:bg-white;
@@ -91,7 +91,7 @@ body {
   @apply transition duration-150 ease-out;
 }
 
-._arrowbtn{
+._arrowbtn {
   @apply p-1 rounded-lg cursor-pointer;
   @apply border border-black;
   @apply bg-black hover:bg-white;
@@ -99,8 +99,32 @@ body {
   @apply transition duration-150 ease-out;
 }
 
-._input{
+._input {
   @apply py-2 placeholder:font-semibold;
   @apply placeholder-gray-500 ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2;
   @apply text-black rounded-2xl border-none;
+}
+
+._deletebtn {
+  @apply p-2 cursor-pointer;
+  @apply border border-red-500;
+  @apply hover:bg-red-500;
+  @apply text-red-500 hover:text-white;
+  @apply transition duration-150 ease-out;
+}
+
+._editbtn {
+  @apply p-2 cursor-pointer;
+  @apply border border-coop-5;
+  @apply hover:bg-coop-4;
+  @apply text-coop-5 hover:text-white;
+  @apply transition duration-150 ease-out;
+}
+
+._actionbtn {
+  @apply p-2 cursor-pointer;
+  @apply border border-coop-1;
+  @apply hover:bg-coop-1;
+  @apply text-coop-1 hover:text-white;
+  @apply transition duration-150 ease-out;
 }
