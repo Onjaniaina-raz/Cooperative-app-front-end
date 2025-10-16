@@ -2,7 +2,7 @@ import { Captions } from "lucide-react";
 
 interface VehiculeListProps {
   plate: string;
-  place: string;
+  place?: string;
   vehiculeclass: string;
   disponibility: string;
 }
@@ -21,10 +21,10 @@ const VehiculeList = ({
         <span className="font-[RedHatDisplay] font-bold">{plate}</span>
       </section>
 
-      <section className="flex gap-2 items-center justify-start">
+      {/* <section className="flex gap-2 items-center justify-start">
         <span className="font-bold">Nombre de place :</span>
         <span className="font-[RedHatDisplay] font-bold">{place}</span>
-      </section>
+      </section> */}
 
       <section className="flex gap-2 items-center justify-start">
         <span className="font-bold">Classe :</span>

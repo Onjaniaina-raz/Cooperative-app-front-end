@@ -79,3 +79,11 @@ export const travelers = Array.from({ length: 10 }, (_, i) => ({
     vehiculeclass: i % 2 === 0 ? "VIP" : "Premium",
     disponibility : i % 2 === 0 ? "Disponible" : "Non disponible"
   }));
+
+  export const history = Array.from({ length: 10 }, (_, i) => ({
+    id: i + 1,
+    date: "16 Octobre 2025",
+    driver: `Driver ${i + 1}`,
+    trajet: i % 2 === 0 ? "TNR-FNR" : "ATS-MJG",
+    vehicule: `${Math.random().toString().slice(2, 5)} ${Math.random().toString().slice(2, 4)} TAF`,
+  }));
