@@ -128,3 +128,7 @@ body {
   @apply text-coop-1 hover:text-white;
   @apply transition duration-150 ease-out;
 }
+
+input:focus ~ .input-text{
+  @apply text-coop-5 transform -translate-y-7 -translate-x-4 bg-white w-fit;
+}

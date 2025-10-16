@@ -87,3 +87,41 @@ export const travelers = Array.from({ length: 10 }, (_, i) => ({
     trajet: i % 2 === 0 ? "TNR-FNR" : "ATS-MJG",
     vehicule: `${Math.random().toString().slice(2, 5)} ${Math.random().toString().slice(2, 4)} TAF`,
   }));
+
+  export const destination = {
+    Tana : {
+      id: 1,
+      label: "Antananarivo",
+      tag: "TNR"
+    },
+
+    Majunga : {
+      id: 1,
+      label: "Majunga",
+      tag: "MJN"
+    },
+
+    Ambatolampy : {
+      id: 1,
+      label: "Ambatolampy",
+      tag: "APY"
+    },
+
+    Fianara : {
+      id: 1,
+      label: "Fianarantsoa",
+      tag: "FNR"
+    },
+
+    Tamatave : {
+      id: 1,
+      label: "Tamatave",
+      tag: "TMM"
+    },
+
+    Antsirabe : {
+      id: 1,
+      label: "Antsirabe",
+      tag: "ATB"
+    },
+  };
