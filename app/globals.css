@@ -130,5 +130,5 @@ body {
 }
 
 input:focus ~ .input-text{
-  @apply text-coop-5 transform -translate-y-7 -translate-x-4 bg-white w-fit;
+  @apply text-coop-5 transform -translate-y-7 -translate-x-4 bg-white w-fit px-3;
 }
